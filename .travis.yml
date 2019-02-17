@@ -21,6 +21,6 @@ deploy:
     develop: converse-nest-dev
     master: converse-nest
   on:
-    repo: pndemo/converse-nest
+    repo: pndemo/converse_nest
   run:
     - "rails db:migrate"
