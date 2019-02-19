@@ -23,4 +23,4 @@ deploy:
   on:
     repo: pndemo/converse_nest
   run:
-    - "rails db:migrate"
+    - "detached rails db:migrate"
