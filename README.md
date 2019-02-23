@@ -66,7 +66,7 @@ Endpoint | Functionality
 ------------ | -------------
 POST /signup | Create a new user account
 
-### Sign Up module
+### Authentication module
 
 Endpoint | Functionality
 ------------ | -------------
@@ -133,7 +133,7 @@ The demo API of the Converse Next app has been hosted on Heroku and can be used 
 
 ## Next Steps
 
-While this app provides simple micro-blogging functionalities of adding posts and comments, the next steps are to improve it by adding authentication and user management functionalities.
+While this app provides simple micro-blogging functionalities of registering, authenticating, adding posts and comments, the next step is to improve user management by enabling users to edit their information, change their password and control accessability of blog posts they posted by them.
 
 ## Licensing
 This app is licensed under the MIT license.
