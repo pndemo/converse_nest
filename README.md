@@ -1,5 +1,18 @@
 # Converse Nest
 
+<a href="https://www.codacy.com/app/pndemo/converse_nest?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pndemo/converse_nest&amp;utm_campaign=Badge_Grade">
+<img class="notice-badge" src="https://api.codacy.com/project/badge/Grade/1512eaed87c44b8794ca3aae2154c76b" alt="Badge"/>
+</a>
+<a href="https://travis-ci.org/pndemo/converse_nest">
+<img class="notice-badge" src="https://travis-ci.org/pndemo/converse_nest.svg?branch=master" alt="Badge"/>
+</a>
+<a href="https://coveralls.io/github/pndemo/converse_nest">
+<img class="notice-badge" src="https://coveralls.io/repos/github/pndemo/converse_nest/badge.svg?branch=master" alt="Badge"/>
+</a>
+<a href="https://github.com/pndemo/converse_nest/blob/develop/License.md">
+<img class="notice-badge" src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="Badge"/>
+</a>
+
 Converse Nest is a simple micro-blogging based API. It's simple to integrate and fun to use!!!
 
 ## Install
@@ -71,23 +84,26 @@ Install [httpie](https://httpie.org/) on your computer and make tests using the 
 
 #### GET /posts
 ```shell
-http :3000/posts
+http localhost:3000/posts
 ```
 
 #### POST /posts
 ```shell
-http POST :3000/posts title='My Weekend' content='It was so awesome' created_by='Paul'
+http POST localhost:3000/posts title='My Weekend' content='It was so awesome' created_by='Paul'
 ```
 
 #### PUT /posts/:id
 ```shell
-http PUT :3000/posts/1 title='My Best Weekend'
+http PUT localhost:3000/posts/1 title='My Best Weekend'
 ```
 
 #### DELETE /posts/:id
 ```shell
-http DELETE :3000/posts/1
+http DELETE localhost:3000/posts/1
 ```
+
+## Demo API
+The demo API of the Converse Next app has been hosted on Heroku and can be used to test functionalities of the app without having to install the app locally. To use the demo API, install [httpie](https://httpie.org/) on your computer and use the testing commands above replacing `localhost:3000` with `converse-nest.herokuapp.com`.
 
 ## Next Steps
 
