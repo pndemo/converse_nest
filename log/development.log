@@ -48,3 +48,17 @@ Migrating to AddCreatedByToComment (20190222203719)
   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2240442927012377325)[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2019-02-23 14:34:57 +0300
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/paul/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.6.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/paul/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/railties-5.1.6.1/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 20ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2019-02-23 14:35:06 +0300
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (7.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Completed 200 OK in 42ms (Views: 10.0ms | ActiveRecord: 18.9ms)
+
+
