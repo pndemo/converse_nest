@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :post do
-    title { "MyString" }
-    content { "MyText" }
-    created_by { "MyString" }
+    title { Faker::Lorem.word }
+    content { Faker::Lorem.paragraph }
+    created_by { Faker::Name.name }
   end
 end
