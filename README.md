@@ -60,6 +60,18 @@ rails s
 
 ## API Endpoints
 
+### Sign Up module
+
+Endpoint | Functionality
+------------ | -------------
+POST /signup | Create a new user account
+
+### Sign Up module
+
+Endpoint | Functionality
+------------ | -------------
+POST /auth/login | Login a registered user
+
 ### Posts module
 
 Endpoint | Functionality
@@ -82,24 +94,38 @@ DELETE /posts/:post_id/comments/:id | Delete an existing post comment
 
 Install [httpie](https://httpie.org/) on your computer and make tests using the format below. Please note that the same testing format applies to the comments module.
 
+#### GET /signup
+```shell
+http localhost:3000/signup name='Paul' email='paul@mail.com' password='strong' password_confirmation='strong'
+```
+
+#### GET /auth/login
+```shell
+http localhost:3000/auth/login email='paul@mail.com' password='strong'
+```
+
 #### GET /posts
 ```shell
-http localhost:3000/posts
+http localhost:3000/posts \
+Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTEwMjEzMTF9.sf1lsNjEMFUMBfUJvZdquDx60aib-1ngMFAi6E9PC-8'
 ```
 
 #### POST /posts
 ```shell
-http POST localhost:3000/posts title='My Weekend' content='It was so awesome' created_by='Paul'
+http POST localhost:3000/posts title='My Weekend' content='It was so awesome' created_by='Paul' \
+Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTEwMjEzMTF9.sf1lsNjEMFUMBfUJvZdquDx60aib-1ngMFAi6E9PC-8'
 ```
 
 #### PUT /posts/:id
 ```shell
-http PUT localhost:3000/posts/1 title='My Best Weekend'
+http PUT localhost:3000/posts/1 title='My Best Weekend' \
+Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTEwMjEzMTF9.sf1lsNjEMFUMBfUJvZdquDx60aib-1ngMFAi6E9PC-8'
 ```
 
 #### DELETE /posts/:id
 ```shell
-http DELETE localhost:3000/posts/1
+http DELETE localhost:3000/posts/1 \
+Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTEwMjEzMTF9.sf1lsNjEMFUMBfUJvZdquDx60aib-1ngMFAi6E9PC-8'
 ```
 
 ## Demo API
