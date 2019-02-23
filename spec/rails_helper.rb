@@ -73,7 +73,9 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
 
   # RequestSpecHelper
-  config.include RequestSpecHelper, type: :request
+  # config.include RequestSpecHelper, type: :request
+  config.include RequestSpecHelper
+  config.include ControllerSpecHelper
 
   # Trancating tables for transactions
   config.before(:suite) do
