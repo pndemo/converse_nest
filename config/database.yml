@@ -83,6 +83,3 @@ production:
   database: converse_nest_production
   username: converse_nest
   password: <%= ENV['CONVERSE_NEST_DATABASE_PASSWORD'] %>
-
-cucumber:
-  <<: *test
