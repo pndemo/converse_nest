@@ -7,7 +7,7 @@
 <img class="notice-badge" src="https://travis-ci.org/pndemo/converse_nest.svg?branch=master" alt="Badge"/>
 </a>
 <a href="https://coveralls.io/github/pndemo/converse_nest">
-<img class="notice-badge" src="https://coveralls.io/repos/github/pndemo/converse_nest/badge.svg?branch=master" alt="Badge"/>
+<img class="notice-badge" src="https://coveralls.io/repos/github/pndemo/converse_nest/badge.svg?branch=master&service=github" alt="Badge"/>
 </a>
 <a href="https://github.com/pndemo/converse_nest/blob/develop/License.md">
 <img class="notice-badge" src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="Badge"/>
@@ -62,33 +62,33 @@ rails s
 
 ### Sign Up module
 
-Endpoint | Functionality
------------- | -------------
-POST /signup | Create a new user account
+Endpoint | Functionality | Access
+------------ | ------------- | -------------
+POST /signup | Create a new user account | PUBLIC
 
 ### Authentication module
 
-Endpoint | Functionality
------------- | -------------
-POST /auth/login | Login a registered user
+Endpoint | Functionality | Access
+------------ | ------------- | -------------
+POST /auth/login | Login a registered user | PUBLIC
 
 ### Posts module
 
-Endpoint | Functionality
------------- | -------------
-GET /posts | Get all blog posts
-POST /posts | Create a new blog post
-PUT /posts/:id | Update an existing blog post
-DELETE /posts/:id | Delete an existing blog post
+Endpoint | Functionality | Access
+------------ | ------------- | -------------
+GET /posts | Get all blog posts | PRIVATE
+POST /posts | Create a new blog post | PRIVATE
+PUT /posts/:id | Update an existing blog post | PRIVATE
+DELETE /posts/:id | Delete an existing blog post | PRIVATE
 
 ### Comments module
 
-Endpoint | Functionality
------------- | -------------
-GET /posts/:post_id/comments | Get all post comments
-POST /posts/:post_id/comments | Create a new post comment
-PUT /posts/:post_id/comments/:id | Update an existing post comment
-DELETE /posts/:post_id/comments/:id | Delete an existing post comment
+Endpoint | Functionality | Access
+------------ | ------------- | -------------
+GET /posts/:post_id/comments | Get all post comments | PRIVATE
+POST /posts/:post_id/comments | Create a new post comment | PRIVATE
+PUT /posts/:post_id/comments/:id | Update an existing post comment | PRIVATE
+DELETE /posts/:post_id/comments/:id | Delete an existing post comment | PRIVATE
 
 ## Testing the App
 
@@ -128,12 +128,12 @@ http DELETE localhost:3000/posts/1 \
 Authorization:'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTEwMjEzMTF9.sf1lsNjEMFUMBfUJvZdquDx60aib-1ngMFAi6E9PC-8'
 ```
 
-## Demo API
-The demo API of the Converse Next app has been hosted on Heroku and can be used to test functionalities of the app without having to install the app locally. To use the demo API, install [httpie](https://httpie.org/) on your computer and use the testing commands above replacing `localhost:3000` with `converse-nest.herokuapp.com`.
+#### GET, POST, PUT & DELETE comment(s)
+The syntax is similar getting, posting, updating and deleting posts as illustrated above.
 
 ## Next Steps
 
-While this app provides simple micro-blogging functionalities of registering, authenticating, adding posts and comments, the next step is to improve user management by enabling users to edit their information, change their password and control accessability of blog posts they posted by them.
+While this app provides simple micro-blogging functionalities of registering, authenticating, adding posts and comments, the next steps are to improve data validation and user management by enabling users to edit their information, change their password and control accessability of blog posts they posted by them.
 
 ## Licensing
 This app is licensed under the MIT license.
