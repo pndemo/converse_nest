@@ -22,7 +22,6 @@ deploy:
   api_key:
     secure: ps/fgITPKs24KX5IlP/xswibkclLPql3X5rZrag89XTk/xBLr0Zhz8h1J9IV3oG/RaqyG8ItwgObOsbhoSNTfruXbYx0b86z6kgrp7QkOx1cDu6B9r2BgeQ7Z5miMWl8zcPxaMiiG+ygTI1JeLlwQkbwOboZymePYWsK42MQjE59M3O4gRUm/iKa58ynATivgaI0u2/0ZVpqqYo8nSsd/14hnH87Rjr/cgz79ACR09Dp2q8c8ZYjtIXj8wlD0zRDDbULPdI0tYwIQdDfAu8w5aIg8HE3/3q3jPYRmi8PScWQoyVPcfg4k5J9eYHm/SdNMR3lM4mNGdEx7ot4Vt6OKDqa+xF47A7rHoy2zYXEKz/5BLIt6UZPDfSgqLZkTyATmhtBrs2erlyFPL3DdqGYxnteRMuXrEucAMAH0wodvlsR/jR6yvI6Q8GWnozCv7K+5I49to4Fe6sA1hYYn0AWBIS+SWH8w7xY6feVfDVszwPFxq+zd5yLT9RsNs9R1SV7qTgj3SvnUVgvefCmstb2HEe8lynT5WtIzUp32ZQr514NZa2psc6TMsYMdbxlUgXnAfP7M/ypUaKQXDzE/1JREkzpyiJVWD4QlH7oX/eQZLafuAm/i3iE1nTeFdXMzO0KCWJpqWTIsSY+rtxTDda3HfpEkjwMEy6oi5IK3LqZiGo=
   app:
-    develop: converse-nest-dev
     master: converse-nest
   on:
     repo: pndemo/converse_nest
