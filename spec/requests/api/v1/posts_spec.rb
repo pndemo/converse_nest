@@ -7,7 +7,7 @@ RSpec.describe 'Posts API', type: :request do
   let(:headers) { valid_headers }
 
   describe 'GET /posts' do
-    before { get '/posts', params: {}, headers: headers }
+    before { get api_v1_posts_path, params: {}, headers: headers }
 
     it 'returns posts' do
       expect(json).not_to be_empty
@@ -20,7 +20,7 @@ RSpec.describe 'Posts API', type: :request do
   end
 
   describe 'GET /posts/:id' do
-    before { get "/posts/#{post_id}", params: {}, headers: headers }
+    before { get api_v1_post_path(post_id), params: {}, headers: headers }
 
     context 'when the record exists' do
       it 'returns the post' do
@@ -48,7 +48,7 @@ RSpec.describe 'Posts API', type: :request do
     end
 
     context 'when the request is valid' do
-      before { post '/posts', params: valid_attributes, headers: headers }
+      before { post api_v1_posts_path, params: valid_attributes, headers: headers }
 
       it 'creates a post' do
         expect(json['title']).to eq('Learn Elm')
@@ -61,7 +61,7 @@ RSpec.describe 'Posts API', type: :request do
 
     context 'when the request is invalid' do
       let(:invalid_attributes) { { title: nil }.to_json }
-      before { post '/posts', params: invalid_attributes, headers: headers }
+      before { post api_v1_posts_path, params: invalid_attributes, headers: headers }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)
@@ -73,7 +73,7 @@ RSpec.describe 'Posts API', type: :request do
     let(:valid_attributes) { { title: 'My Weekend' }.to_json }
 
     context 'when the record exists' do
-      before { put "/posts/#{post_id}", params: valid_attributes, headers: headers }
+      before { put api_v1_post_path(post_id), params: valid_attributes, headers: headers }
 
       it 'updates the record' do
         expect(response.body).to be_empty
@@ -86,7 +86,7 @@ RSpec.describe 'Posts API', type: :request do
   end
 
   describe 'DELETE /posts/:id' do
-    before { delete "/posts/#{post_id}", params: {}, headers: headers }
+    before { delete api_v1_post_path(post_id), params: {}, headers: headers }
 
     it 'returns status code 204' do
       expect(response).to have_http_status(204)

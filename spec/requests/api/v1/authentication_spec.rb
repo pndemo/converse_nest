@@ -18,7 +18,7 @@ RSpec.describe 'Authentication', type: :request do
     end
 
     context 'When request is valid' do
-      before { post '/auth/login', params: valid_credentials, headers: headers }
+      before { post api_v1_auth_login_path, params: valid_credentials, headers: headers }
 
       it 'returns an authentication token' do
         expect(json['auth_token']).not_to be_nil
@@ -26,7 +26,7 @@ RSpec.describe 'Authentication', type: :request do
     end
 
     context 'When request is invalid' do
-      before { post '/auth/login', params: invalid_credentials, headers: headers }
+      before { post api_v1_auth_login_path, params: invalid_credentials, headers: headers }
 
       it 'returns a failure message' do
         expect(json['message']).to match(/Invalid credentials/)
